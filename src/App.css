@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+:root{
+  --headerFont: 'Dancing Script', cursive;
+}
+
+/* <----------------main display----------------> */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container{
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sub-container{
+  height: inherit;
+  width: inherit;
+}
+
+/* <-----------------------header-----------------------> */
+
+.header-container{
+  height: 100vh;
+  width: inherit;
+  background: url('./icons/photo-background.jpg') center right no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title-container{
+  margin: 5em 0em;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-title-name{
+  width: 5em;
+  font-size: 4em;
+  font-family: var(--headerFont);
+  color: white;
+  margin-left: 4em;
+}
+
+.header-btns-menu{
+ margin-left: 50em;
+ 
+}
+
+.header-icon{
+  font-size: 2em;
+  background-color: inherit;
+}
+
+.header-image{
+  height: 2em;
+  width: 2em;
+}
+
+.header-btn{
+  background-color: inherit;
+  border: none;
+  margin: 0 1em;
+  position: relative;
+  bottom: 2em;
+}
+
+/* <----------------create album--------------> */
+
+.album-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-section{
+  width: 85em;
+  height: 50em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px 2px grey;
+}
+
+.album-background-image{
+  height: 47em;
+  width: 82em;
+  filter: blur(0.3em);
+  -webkit-box-shadow: 0 0 1em 0.8em #341b50;
+  box-shadow: #341b50 0px 10px 20px, #341b50 0px 6px 6px;
+  position: relative;
+}
+
+.image-over-container{
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2em 3em;
+}
+
+.album-input-form{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  width: 15em;
+}
+
+.album-upload-label-field{
+  color: black;
+  background-color:yellow;
+  height: 2em;
+  padding-top: 0.4em;
+  text-align: center;
+  margin: 0.5em 0;
+  border-radius: 0.3em;
+}
+
+.album-label-field{
+  margin: 0.5em 0;
+}
+
+.album-input-field{
+  height: 2.5em;
+  padding-left: 0.5em;
+  font-size: 0.8em;
+}
+
+.create-album-btn{
+  width: 10em;
+  height: 2.5em;
+  align-self: center;
+  border-radius: 0.3em;
+  border: none;
+  font-size: 0.8em;
+}
+
+#image-upload{
+  display: none;
+}
+
+/* <-----------------album container---------------> */
+
+.album-image-container{
+  height: 40em;
+  width: 80em;
+  padding: 4em 1em 2em 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.album-card-section{
+  height: 10em;
+  width: 10em;
+  border-radius: 0.3em;
+  margin-right: 4em;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  position: relative;
+}
+
+.album-card-image{
+  height: inherit;
+  width: inherit;
+}
+
+.album-card-title{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background-color: rgba(6, 40, 114, 0.438);
+  font-size: 20px;
+  color: white;
+}
+
+.album-card-section:hover .album-card-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* <-------------------gallary component-------------------> */
+
+.image-gallary-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallary-display{
+  box-shadow: 0 0 5px 2px grey;
+  height: 50em;
+  width: 80em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallary-image{
+  height: 47em;
+  width: 77em;
+  filter: blur(0.1em);
+  box-shadow: #f0e6fb 0px 10px 20px, #eee0fd 0px 6px 6px; 
+  position: relative;
+}
+
+.image-upload-label-field{
+  width: 10em;
+  height: 3em;
+  border: none;
+  text-align: center;
+  padding-top: 1em;
+  background-color: yellow;
+  border-radius: 0.3em;
+}
+
+.image-container{
+  height: 45em;
+  width: 77em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  justify-content: flex-start;
+  line-height: 0.5em;
+  overflow-y: scroll;
+}
+
+.image-card{
+  height: 8em;
+  width: 8em;
+  margin: 1em 2em;
+}
+
+.gallery-image{
+  height: inherit;
+  width: inherit;
+}
+
+/* <--------------------show image-----------------> */
+
+.image-show-container{
+  height: 50em;
+  width: 95em;
+  margin: 1.5em auto;
+}
+
+.image-show-card{
+  height: inherit;
+  width: inherit;
+}
+
+/* <----------------------image animation------------------> */
+
+.image-animation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.animation-display{
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sequence-container{
+  height: 17rem;
+  width: 55rem;
+  background-color: inherit;
+  margin-bottom: 2rem;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  /* border: 5px solid red; */
+  position: relative;
+}
+
+.animation-silder{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2px solid blue; */
+  position: absolute;
+}
+
+.sequence-image{
+  height: 8rem;
+  width: 8rem;
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.live-image{
+  position: absolute;
+  top: 2;
+  left: 2;
+ height: 8rem;
+ width: 7.4rem;
+ padding: 1rem;
+}
+
+.active{
+  width: 9rem;
+  height: 9rem;
+}
+.active > img{
+  
+ transform: scale(2); 
+ transition: transform .6s ease-in-out; 
+}
+
